@@ -25,9 +25,10 @@
     "todomvc-app-css": "^2.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "start-app": "node-dev ./app/bin/www.js",
-    "build": "react-scripts build && npm run-script start-app",
+    "start-react": "react-scripts start",
+    "start-app": "node ./app/bin/www.js",
+    "start": "react-scripts build && npm run-script start-app",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
