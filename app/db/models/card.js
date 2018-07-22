@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-console.log('Schema',Schema.Types);
 const CardSchema = new Schema({
   text: {
     type: String,
