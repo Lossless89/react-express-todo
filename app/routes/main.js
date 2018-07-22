@@ -17,12 +17,12 @@ router.post('/user_new', userNew);
 // loging user
 router.post('/login', userLogin);
 // create a new todo note
-router.post('/todo_new', todoNew);
+router.post('/todos', todoNew);
 // get all notes
 router.get('/todos', todoGetAll);
 // update note
-router.put('/todos/:id', todoUpdate);
+router.put('/todos', todoUpdate);
 // delete note 
-router.delete('/todos/:id', todoDelete);
+router.delete('/todos', todoDelete);
 
 module.exports = router;
