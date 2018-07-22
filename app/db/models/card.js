@@ -11,6 +11,10 @@ const CardSchema = new mongoose.Schema({
     default: false,
     required: true,
   },
+  author: { 
+    type: Schema.Types.ObjectId,
+    ref: 'User' 
+  }
 });
 
 const Card = mongoose.model('Card', CardSchema);

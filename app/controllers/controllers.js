@@ -36,6 +36,8 @@ function userLogin(req, res) {
 
 function todoNew(req, res) {
     const payload = req.data;
+    payload.author = req.session.userId;
+    
     if (payload.text && typeof payload.done === 'boolean') {
         const card = new Card(payload);
         card
@@ -49,7 +51,7 @@ function todoNew(req, res) {
 }
 
 function todoGetAll(req, res) {
-    Card.find({})
+    Card.find({author: req.session.userId})
     .then(data => res.send(data))
     .catch(e => { throw new Error(e) });
 }
