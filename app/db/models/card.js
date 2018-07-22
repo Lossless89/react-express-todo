@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const CardSchema = new mongoose.Schema({
+console.log('Schema',Schema.Types);
+const CardSchema = new Schema({
   text: {
     type: String,
     required: true,
@@ -11,9 +13,9 @@ const CardSchema = new mongoose.Schema({
     default: false,
     required: true,
   },
-  author: { 
+  author: {
     type: Schema.Types.ObjectId,
-    ref: 'User' 
+    ref: 'User'
   }
 });
 
